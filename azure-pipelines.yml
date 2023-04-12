@@ -20,9 +20,15 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - task: Docker@2
+    - task: SonarQubePrepare@5
       inputs:
-        containerRegistry: 'Manan''s Docker Hub'
-        repository: 'mananmongia/privatetestrepo'
-        command: 'buildAndPush'
-        Dockerfile: 'Dockerfile'
+        scannerMode: 'CLI'
+        configMode: 'file'
+    - task: SonarQubeAnalyze@5
+    # - task: Docker@2
+    #   inputs:
+    #     containerRegistry: 'Manan''s Docker Hub'
+    #     repository: 'mananmongia/privatetestrepo'
+    #     command: 'buildAndPush'
+    #     Dockerfile: 'Dockerfile'
+      
