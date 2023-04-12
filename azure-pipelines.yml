@@ -23,6 +23,6 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Manan''s Docker Hub'
-        repository: 'privatetestrepo'
+        repository: 'mananmongia/privatetestrepo'
         command: 'buildAndPush'
         Dockerfile: 'Dockerfile'
