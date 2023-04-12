@@ -25,5 +25,4 @@ stages:
         containerRegistry: 'Manan''s Docker Hub'
         repository: 'privatetestrepo'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        addPipelineData: false
+        Dockerfile: 'Dockerfile'
