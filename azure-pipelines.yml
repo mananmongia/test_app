@@ -22,11 +22,11 @@ stages:
     steps:
     - task: SonarQubePrepare@5
       inputs:
-        SonarQube: 'CensaSonarQube'
+        SonarQube: 'SonarQube_MM_VM'
         scannerMode: 'CLI'
         configMode: 'manual'
-        cliProjectKey: 'logistics-fe-uat'
-        cliProjectName: 'logistics-fe-uat'
+        cliProjectKey: 'test-project'
+        cliProjectName: 'test-project'
         cliSources: '.'
     - task: SonarQubeAnalyze@5
     # - task: Docker@2
